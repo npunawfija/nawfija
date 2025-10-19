@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Nawfija Community Brand Colors */
+    --background: 45 23% 97%;
+    --foreground: 25 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 15% 15%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 142 76% 45%;
+
+    --secondary: 45 23% 94%;
+    --secondary-foreground: 25 15% 15%;
+
+    --muted: 45 23% 94%;
+    --muted-foreground: 25 15% 45%;
+
+    --accent: 32 95% 44%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 45 23% 87%;
+    --input: 45 23% 87%;
+    --ring: 142 76% 36%;
+
+    --radius: 0.75rem;
+
+    /* Community specific colors */
+    --community-green: 142 76% 36%;
+    --community-gold: 32 95% 44%;
+    --community-earth: 25 45% 75%;
+    --community-sky: 200 50% 85%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--community-green)), hsl(var(--primary-glow)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--secondary)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(32 95% 55%));
+
+    /* Shadows */
+    --shadow-community: 0 10px 25px -5px hsl(var(--community-green) / 0.1);
+    --shadow-elevated: 0 25px 50px -12px hsl(var(--foreground) / 0.15);
+
+    --sidebar-background: 45 23% 97%;
+    --sidebar-foreground: 25 15% 25%;
+    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 45 23% 94%;
+    --sidebar-accent-foreground: 25 15% 15%;
+    --sidebar-border: 45 23% 87%;
+    --sidebar-ring: 142 76% 36%;
+  }
+
+  .dark {
+    --background: 25 15% 8%;
+    --foreground: 45 23% 92%;
+
+    --card: 25 15% 10%;
+    --card-foreground: 45 23% 92%;
+
+    --popover: 25 15% 10%;
+    --popover-foreground: 45 23% 92%;
+
+    --primary: 142 76% 45%;
+    --primary-foreground: 25 15% 8%;
+    --primary-glow: 142 76% 55%;
+
+    --secondary: 25 15% 15%;
+    --secondary-foreground: 45 23% 92%;
+
+    --muted: 25 15% 15%;
+    --muted-foreground: 45 15% 65%;
+
+    --accent: 32 95% 50%;
+    --accent-foreground: 25 15% 8%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 45 23% 92%;
+
+    --border: 25 15% 20%;
+    --input: 25 15% 20%;
+    --ring: 142 76% 45%;
+
+    --community-green: 142 76% 45%;
+    --community-gold: 32 95% 50%;
+    --community-earth: 25 45% 35%;
+    --community-sky: 200 50% 35%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(var(--community-green)), hsl(var(--primary-glow)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--secondary)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(32 95% 60%));
+
+    --shadow-community: 0 10px 25px -5px hsl(var(--community-green) / 0.3);
+    --shadow-elevated: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
+
+    --sidebar-background: 25 15% 8%;
+    --sidebar-foreground: 45 23% 85%;
+    --sidebar-primary: 142 76% 45%;
+    --sidebar-primary-foreground: 25 15% 8%;
+    --sidebar-accent: 25 15% 15%;
+    --sidebar-accent-foreground: 45 23% 85%;
+    --sidebar-border: 25 15% 20%;
+    --sidebar-ring: 142 76% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
